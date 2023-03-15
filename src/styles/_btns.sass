@@ -1,0 +1,46 @@
+@use 'variables'
+
+.btn-primary
+  padding: 2rem 4rem
+  border: 3px solid variables.$Almost-Black
+  background: variables.$Almost-Black
+  font-family: 'Epilogue', sans-serif
+  font-weight: 700
+  color: variables.$Almost-White
+  border-radius: 8px
+  font-size: 2rem
+  transition: .6s
+  &:hover, &:focus
+    background: transparent
+    border: 3px solid variables.$Almost-Black
+    color: variables.$Almost-Black
+    cursor: pointer
+.btn-secondary
+  width: 100px
+  height: 32px
+  background: transparent
+  border: 2px solid variables.$Medium-Gray
+  border-radius: 9px
+  outline: 0
+  font-family: 'Epilogue', sans-serif
+  font-size: 1.4rem
+  font-weight: 500
+  color: variables.$Medium-Gray
+  transition: .2s
+  &:hover, &:focus
+    border: 2px solid variables.$Almost-Black
+    color: variables.$Almost-Black
+    cursor: pointer
+
+.btn-tertiary 
+  border: 0
+  outline: 0
+  background: transparent
+  font-family: 'Epilogue', sans-serif
+  color: variables.$Medium-Gray
+  transition: .2s
+  &:hover, &:focus
+    color: variables.$Almost-Black
+    cursor: pointer
+
+

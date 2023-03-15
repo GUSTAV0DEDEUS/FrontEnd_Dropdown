@@ -1,0 +1,78 @@
+@use '../../styles/variables' 
+@use '../../styles/mixins' 
+
+
+main
+  width: 100%
+  height: 90vh
+  display: grid
+  padding:6rem
+  grid-template-columns: repeat(2,1fr)
+  @include mixins.tablet
+    display: flex
+    flex-direction: column-reverse
+  @include mixins.mobile
+    padding: 0
+  
+  .col
+    height: 100%
+    display: grid
+    align-items: center
+    justify-content: center
+    .content
+      display: flex
+      flex-direction: column
+      align-items: start
+      gap: 6rem
+      @include mixins.tablet
+        align-items: center
+        gap: 3rem
+      h1
+        font-size: 6rem
+        font-weight: 700
+        color: variables.$Almost-Black
+        @include mixins.tablet
+          text-align: center
+          font-size: 4rem
+        span
+          display: block
+          @include mixins.tablet
+            display: inline
+        
+      p
+        width: 40ch
+        font-size: 1.8rem
+        color: variables.$Medium-Gray
+        @include mixins.tablet
+          text-align: center
+          font-size: 2rem
+          width: 90%
+      .btn-primary
+        @include mixins.mobile
+          font-size: 1.6rem
+          padding: 1.4rem
+    .brands
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @include mixins.mobile
+        padding: 0 2rem
+      img
+        @include mixins.mobile
+          width: calc( 100% /4 - 2rem )
+
+  
+  .imgContainer
+    @include mixins.tablet
+      width: 100%
+      height: 60%
+    .image
+      background: url(../../assets/image-hero-desktop.png) no-repeat top center
+      background-size: contain
+      height: 90%
+      @include mixins.tablet
+        background: url(../../assets/image-hero-mobile.png) no-repeat top center
+        background-size: contain
+        height: 100%
+
+
